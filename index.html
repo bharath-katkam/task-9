@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open-post page for travel guide</title>
+  <style>
+    
+       body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    
+    }
+
+     main {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+     .video-container {
+      width: 100%;
+      max-width: 800px; 
+      margin-bottom: 20px;
+    }
+
+    video {
+      width: 100%;
+      height: auto; 
+      display: block;
+    }
+
+    .content-section {
+      display: none;
+    }
+
+    .content-section.active {
+      display: block;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+    }
+   .buttons button.active {
+      background-color:white; 
+   }
+   
+ .places {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .place {
+      width: 300px;
+      margin: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .place img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .place h3 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .place p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+ 
+
+  <main>
+    <div class="video-container">
+      <video autoplay loop muted>
+        
+        <source src="shimla.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="buttons">
+      <button onclick="showContent('day1')">Day 1</button>
+      <button onclick="showContent('day2')">Day 2</button>
+      <button onclick="showContent('day3')">Day 3</button>
+
+     
+    </div>
+<h2 align="center">Detailed itinerary for 3-days trip to Himachal Pradesh</h2>
+
+    <div class="content-section active" id="day1">
+
+      <div class="places">
+    <div class="place">
+      <button>7:00AM</button>
+    <p>Book journey to Shimla</p>
+      <img src="flight_route.jpg" alt="Flight_route">
+      <br><br>
+      <button>visit site</button>
+    </div>
+   
+  </div>
+ <div class="places">
+    <div class="place">
+      <button>2:30PM</button>
+   <p>Accomodation</p>
+       <img src="Accomodation.jpg" alt="Accomodation">
+   <br><br>
+      <button>visit site</button>
+    </div>
+   
+  </div>
+ <div class="places">
+    <div class="place">
+     <button>4:00PM</button>
+  <p>Explore attraction-1</p>
+       <img src="explore_1.jpg" alt="Explore_attraction_1">
+<br><br>
+      <button>visit site</button>
+    </div>
+   
+  </div>
+<div class="places">
+    <div class="place">
+     <button>6:00PM</button>
+  <p>Explore attraction-2</p>
+       <img src="explore_1.jpg" alt="Explore_attraction_2">
+<br><br>
+      <button>visit site</button>
+    </div>
+   
+  </div>
+    </div>
+
+    <div class="content-section" id="day2">
+      <div class="places">
+    <div class="place">
+      <button>7:00AM</button>
+    <p>Tourist attraction</p>
+      <img src="tourist attraction.jpg" alt="Tourist attraction">
+      <br><br>
+      <button>visit site</button>
+    </div>
+   
+  </div>
+ <div class="places">
+    <div class="place">
+      <button>2:30PM</button>
+      <p>Culinary delight</p>
+       <img src="culinary delight.jpg" alt="Culinary delight">
+<br><br>
+      <button>visit site</button>
+    </div>
+   
+  </div>
+ <div class="places">
+    <div class="place">
+     <button>4:00PM</button>
+      <p>Explore attraction-2</p>
+       <img src="explore_1.jpg" alt="Explore_attraction_2">
+<br><br>
+      <button>visit site</button>
+    </div>
+   
+  </div>
+    </div>
+
+    </div>
+    <div class="content-section" id="day3">
+       <div class="places">
+    <div class="place">
+      <button>8:00AM</button>
+    <p>Return journey to Banglore</p>
+      <img src="flight_route.jpg" alt="Flight_route">
+      <h3></h3>
+      <button>visit site</button>
+    </div>
+   
+  </div>
+ 
+    </div>
+    </div>
+
+    
+  </main>
+
+  <script>
+    function showContent(id) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
+
